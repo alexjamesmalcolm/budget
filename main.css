@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.add-goal {
+  display: grid;
+  width: max-content;
+  gap: 4px;
+  margin: 3px;
+}
+
+.add-goal button[type="submit"] {
+  padding: 4px 12px;
+  width: min-content;
+  grid-column: 3;
+  grid-row: 1/3;
+  align-self: center;
+  font-size: 32px;
+  border-radius: 5px;
+}
+
+.form.control {
+  border: 1px rgb(186, 186, 186) solid;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 0px 2px;
+}
+
+.form.control:focus-within {
+  outline: auto 2px Highlight;
+  outline: auto 5px -webkit-focus-ring-color;
+}
+
+.form.control input {
+  border: none;
+  padding: 1px 1px;
+  font-size: 20px;
+  width: max-content;
+}
+
+.form.control input:focus {
+  outline: none;
+}
+
+.footer {
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: center;
+}
