@@ -5,7 +5,7 @@ import Goal from "../models/Goal.js";
 const budget = (remainingBalance, goals = [new Goal()]) => {
   const behindTotal = goals
     .map(({ behindAmount }) => Math.max(0, behindAmount))
-    .reduce((a, b) => a + b);
+    .reduce((a, b) => a + b, 0);
   // Two scenarios
   if (remainingBalance <= behindTotal) {
     // 1. Not enough money to catch up on what I'm behind on
