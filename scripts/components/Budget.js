@@ -2,7 +2,6 @@ import { html } from "../dependencies/lit-html.js";
 import budget from "../utils/budget.js";
 
 const Budget = (goals, remainingBalance = 0, updateBalance = () => {}) => {
-  console.log(budget(remainingBalance, goals));
   return html`
     <section>
       <label>Balance to put towards savings:</label>
@@ -10,6 +9,12 @@ const Budget = (goals, remainingBalance = 0, updateBalance = () => {}) => {
         @change=${e => updateBalance(e.target.value)}
         value=${remainingBalance}
       />
+      ${budget(remainingBalance, goals).map(
+        ({ name, amount }) =>
+          html`
+            <p>Put $${amount} towards ${name}</p>
+          `
+      )}
     </section>
   `;
 };
