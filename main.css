@@ -102,6 +102,14 @@ h6 {
   }
 }
 
+.progress-bar-grid {
+  display: grid;
+  grid-template-columns: min-content auto min-content min-content;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0.9rem;
+}
+
 .progress-bar {
   height: 1rem;
   border-radius: 1rem;
@@ -109,9 +117,25 @@ h6 {
 
 .progress-bar.container {
   border: 2px var(--dark-shades) solid;
-  margin: 0.5rem 0.9rem;
+  display: flex;
 }
 
 .progress-bar.filler {
   background-color: var(--main-brand-color);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.progress-bar.label {
+  font-size: 14px;
+}
+
+.progress-bar.label.left-label {
+  color: var(--light-shades);
+  margin-right: 8px;
+}
+
+.progress-bar.label.right-label {
+  color: var(--dark-accent);
+  margin-left: 2px;
 }
