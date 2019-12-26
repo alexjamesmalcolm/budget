@@ -18,11 +18,6 @@ class Goal {
       endDate: new Date(endDate)
     });
   }
-  name = "";
-  startDate = new Date();
-  endDate = new Date();
-  currentAmount = 0;
-  desiredAmount = 1;
   constructor(name, startDate, endDate, currentAmount, desiredAmount) {
     this.name = name;
     this.startDate = startDate;
