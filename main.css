@@ -1,11 +1,30 @@
+:root {
+  --form-control-font-size: 20px;
+  --light-shades: #f4f7f5;
+  --light-accent: #77859f;
+  --main-brand-color: #4bba89;
+  --dark-accent: #b04057;
+  --dark-shades: #201622;
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Lato", sans-serif;
+  color: var(--dark-shades);
 }
 
-:root {
-  --form-control-font-size: 20px;
+body {
+  background-color: var(--light-shades);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--dark-accent);
 }
 
 .add-goal {
@@ -81,4 +100,18 @@
     grid-column: auto;
     grid-row: auto;
   }
+}
+
+.progress-bar {
+  height: 1rem;
+  border-radius: 1rem;
+}
+
+.progress-bar.container {
+  border: 2px var(--dark-shades) solid;
+  margin: 0.5rem 0.9rem;
+}
+
+.progress-bar.filler {
+  background-color: var(--main-brand-color);
 }
