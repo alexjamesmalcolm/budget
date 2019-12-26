@@ -4,7 +4,7 @@ const allocateResources = (
 ) => {
   const totalAmount = amounts
     .map(({ amount }) => amount)
-    .reduce((a, b) => a + b);
+    .reduce((a, b) => a + b, 0);
   return amounts.map(({ name, amount }) => ({
     name,
     amount: (remainingBalance * amount) / totalAmount
