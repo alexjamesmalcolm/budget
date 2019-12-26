@@ -1,5 +1,5 @@
 import { html } from "../dependencies/lit-html.js";
-import Goal from "../scripts/Goal.js";
+import Goal from "../models/Goal.js";
 
 const AddGoal = addGoal => html`
   <h2>Add a new Goal</h2>

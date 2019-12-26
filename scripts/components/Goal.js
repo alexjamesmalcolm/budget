@@ -1,6 +1,6 @@
 import { html } from "../dependencies/lit-html.js";
-import Goal from "../scripts/Goal.js";
-import { round } from "../scripts/utils.js";
+import Goal from "../models/Goal.js";
+import round from "../utils/round.js";
 
 const GoalTemplate = (goal = new Goal(), removeGoal = () => {}) => {
   return html`

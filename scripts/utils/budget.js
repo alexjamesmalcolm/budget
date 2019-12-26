@@ -1,5 +1,5 @@
-import { round, allocateResources } from "./utils.js";
-import Goal from "./Goal.js";
+import { round, allocateResources } from "../utils.js";
+import Goal from "../models/Goal.js/index.js";
 
 const budget = (remainingBalance, goals = [new Goal()]) => {
   const behindTotal = goals

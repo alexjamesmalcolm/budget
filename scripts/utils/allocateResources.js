@@ -1,5 +1,3 @@
-const createDate = (year, month, date) => new Date(year, month + 1, date);
-const round = n => Math.round(n * 100) / 100;
 const allocateResources = (
   remainingBalance = 0,
   amounts = [{ name: "", amount: 0 }]
@@ -13,4 +11,4 @@ const allocateResources = (
   }));
 };
 
-export { createDate, round, allocateResources };
+export default allocateResources;

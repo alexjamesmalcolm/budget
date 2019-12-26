@@ -1,7 +1,7 @@
-import { render as r } from "../dependencies/lit-html.js";
-import AddGoal from "../components/AddGoal.js";
-import Goals from "../components/Goals.js";
-import Goal from "../scripts/Goal.js";
+import { render as r } from "./dependencies/lit-html.js";
+import AddGoal from "./components/AddGoal.js";
+import Goals from "./components/Goals.js";
+import Goal from "./models/Goal.js";
 
 window.Goal = Goal;
 
