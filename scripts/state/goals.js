@@ -20,9 +20,15 @@ const addGoal = callback => (goal = new Goal()) => {
     putGoals(callback)(goals.concat([goal]));
   }
 };
+
 const removeGoal = callback => name => {
   const goals = getGoals();
   putGoals(callback)(goals.filter(goal => goal.name !== name));
 };
 
-export { getGoals, addGoal, removeGoal };
+const updateGoal = callback => name => (updatedGoal = new Goal()) =>
+  putGoals(callback)(
+    getGoals().map(goal => (goal.name === name ? updatedGoal : goal))
+  );
+
+export { getGoals, addGoal, removeGoal, updateGoal };
